@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>COSMOS - Launches</title>
+  </head>
+  <body data-page="launches">
+    <div class="stars"></div>
+    <aside class="sidebar">
+      <div class="brand">
+        <span class="brand-icon"><i class="fa-solid fa-rocket"></i></span>
+        <div>
+          <h1>COSMOS</h1>
+          <p>Space Dashboard</p>
+        </div>
+      </div>
+      <nav class="nav">
+        <a data-page="today" href="index.html"
+          ><i class="fa-solid fa-image"></i> Today in Space</a
+        >
+        <a data-page="launches" href="launches.html"
+          ><i class="fa-solid fa-shuttle-space"></i> Launches</a
+        >
+        <a data-page="planets" href="planets.html"
+          ><i class="fa-solid fa-globe"></i> Planets</a
+        >
+      </nav>
+      <div class="profile">
+        <div class="avatar"><i class="fa-solid fa-user-astronaut"></i></div>
+        <div>
+          <strong>Space Explorer</strong><span>explorer@cosmos.space</span>
+        </div>
+      </div>
+    </aside>
+    <main class="main">
+      <section class="hero">
+        <div>
+          <h2>
+            <i class="fa-solid fa-satellite"></i> Space Explorer Dashboard
+          </h2>
+          <p>Real-time space data from NASA & SpaceDevs</p>
+        </div>
+        <div class="status"><span></span>Live Data</div>
+      </section>
+      <section class="stats">
+        <a class="stat" href="planets.html"
+          ><i class="fa-solid fa-earth-americas"></i>
+          <div><span>8 Planets</span><b id="planetCount">8</b></div></a
+        >
+        <a class="stat" href="launches.html"
+          ><i class="fa-solid fa-rocket"></i>
+          <div><span>10 Launches</span><b id="launchCount">10</b></div></a
+        >
+      </section>
+      <section id="launches" class="panel launches-panel">
+        <div class="section-title">
+          <div>
+            <h2><i class="fa-solid fa-rocket"></i> Upcoming Launches</h2>
+            <p>Real-time tracking of the next missions to space</p>
+          </div>
+        </div>
+        <div class="launch-toolbar original-launch-toolbar">
+          <h3>All Upcoming Launches</h3>
+          <button id="refreshLaunches">
+            <i class="fa-solid fa-rotate"></i> Refresh
+          </button>
+        </div>
+        <div id="featuredLaunch" class="featured-launch">
+          <div class="skeleton featured-skeleton"></div>
+        </div>
+        <div id="launchesGrid" class="launches-grid original-launches-grid">
+          <div class="skeleton"></div>
+          <div class="skeleton"></div>
+          <div class="skeleton"></div>
+        </div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

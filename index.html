@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>COSMOS - Today in Space</title>
+  </head>
+  <body data-page="today">
+    <div class="stars"></div>
+    <aside class="sidebar">
+      <div class="brand">
+        <span class="brand-icon"><i class="fa-solid fa-rocket"></i></span>
+        <div>
+          <h1>COSMOS</h1>
+          <p>Space Dashboard</p>
+        </div>
+      </div>
+      <nav class="nav">
+        <a data-page="today" href="index.html"
+          ><i class="fa-solid fa-image"></i> Today in Space</a
+        >
+        <a data-page="launches" href="launches.html"
+          ><i class="fa-solid fa-shuttle-space"></i> Launches</a
+        >
+        <a data-page="planets" href="planets.html"
+          ><i class="fa-solid fa-globe"></i> Planets</a
+        >
+      </nav>
+      <div class="profile">
+        <div class="avatar"><i class="fa-solid fa-user-astronaut"></i></div>
+        <div>
+          <strong>Space Explorer</strong><span>explorer@cosmos.space</span>
+        </div>
+      </div>
+    </aside>
+    <main class="main">
+      <section class="hero">
+        <div>
+          <h2>
+            <i class="fa-solid fa-satellite"></i> Space Explorer Dashboard
+          </h2>
+          <p>Real-time space data from NASA & SpaceDevs</p>
+        </div>
+        <div class="status"><span></span>Live Data</div>
+      </section>
+      <section class="stats">
+        <a class="stat" href="planets.html"
+          ><i class="fa-solid fa-earth-americas"></i>
+          <div><span>8 Planets</span><b id="planetCount">8</b></div></a
+        >
+        <a class="stat" href="launches.html"
+          ><i class="fa-solid fa-rocket"></i>
+          <div><span>10 Launches</span><b id="launchCount">10</b></div></a
+        >
+      </section>
+      <section id="today" class="panel apod-panel">
+        <div class="section-title">
+          <div>
+            <h2><i class="fa-regular fa-image"></i> Today in Space</h2>
+            <p id="apodSub">Astronomy Picture of the Day - Loading...</p>
+          </div>
+          <button id="loadToday">
+            <i class="fa-solid fa-rotate"></i> Load Today
+          </button>
+        </div>
+        <div class="apod-grid">
+          <div class="media-card">
+            <div id="apodMedia" class="media-loading">
+              Loading today's image...
+            </div>
+            <a id="fullRes" href="#" target="_blank">View Full Resolution</a>
+          </div>
+          <div class="apod-info">
+            <h3 id="apodTitle"><i class="fa-solid fa-star"></i> Loading...</h3>
+            <time id="apodDate">Loading...</time>
+            <p id="apodDesc">
+              <i class="fa-solid fa-circle-info"></i> Loading description...
+            </p>
+            <p id="apodCopy" class="copy">
+              <i class="fa-regular fa-copyright"></i> Loading...
+            </p>
+            <div class="details">
+              <h4><i class="fa-solid fa-list"></i> Image Details</h4>
+              <div><span>Date</span><b id="detailDate">Loading...</b></div>
+              <div><span>Media Type</span><b id="detailType">Image</b></div>
+              <div><span>Source</span><b>NASA APOD</b></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
